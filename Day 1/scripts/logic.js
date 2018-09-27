@@ -59,8 +59,18 @@ function checkKeys(keyNumber) {
 }
 
 function playAudio(i, keyNumber, keyChar){
+    animate(keyChar);
     var sounds = ['clap.wav', 'hihat.wav', 'kick.wav', 'openhat.wav', 'boom.wav', 'ride.wav', 'snare.wav', 'tom.wav', 'tink.wav']
     console.log(keyNumber + ' is ' + keyChar)
     var audio = new Audio('audio/'+ sounds[i]);
     audio.play();
 }
+
+function animate(keyChar){
+    var element = document.getElementById(keyChar);
+    element.classList.add('playAnimation');
+    setTimeout(function() {
+        element.classList.remove('playAnimation');
+    }, 80);
+}
+
