@@ -1,0 +1,44 @@
+/*
+    TAGS
+*/
+body{
+    background: #AAAAAA;
+}
+
+/*
+    TYPOGRAPHY
+*/
+.charWhite{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+.drumType{
+    font-family: sans-serif;
+    font-weight: none;
+    font-size: 11px;
+    color:#FCC919;
+}
+
+/*
+    CUSTOM CLASSES
+*/
+.keys{
+    background: #ff0000;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.key{
+    width:4em;
+    height:3.5em;
+    margin:.5em;
+    padding-top:.4em;
+    border: .09em solid #000000;
+    display: inline-block;
+    text-align: center;
+}
