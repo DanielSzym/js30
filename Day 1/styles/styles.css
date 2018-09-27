@@ -40,12 +40,15 @@ body{
     height:3.5em;
     margin:.5em;
     padding-top:.4em;
-    border: .09em solid #000000;
+    border: 2px solid #000000;
+    border-radius:5px;
     display: inline-block;
     text-align: center;
     transition: transform .2s;
 }
 
 .playAnimation {
-    transform: scale(1.1, 1.1);
+    transform: scale(1.1);
+    border-color:rgba(128, 104, 21, 0.9);
+    box-shadow: 0 0 5px rgb(95, 95, 95);
 }
