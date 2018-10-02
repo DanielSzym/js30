@@ -19,7 +19,7 @@ h1 {
     height:20em;
     margin-top: -10em; /*set to a negative number .5 of your height*/
     margin-left: -10em; /*set to a negative number .5 of your width*/
-    border: 24px solid #ffffff;
+    border: 1em solid #ffffff;
     border-radius:50%;
     background-color: rgba(255, 255, 255, .1);
     position:fixed;
@@ -27,25 +27,12 @@ h1 {
 }
 
 #secondsHand {
-    background-color:#ffffff;
+    background: color #000000;;
     /* Positioning */
     margin-top:9.5em;  /* set to half of circle height - height of hand */
     margin-left:.5em;
     width:9.5em; /* set to half of circle width - margin-left */
     height:.5em;
     transform-origin: right;
-    /*transform: rotate(90deg);*/
-    /*-webkit-animation: spinHand 5s infinite; /* Safari 4.0 - 8.0 */
-    /*animation: spinHand 60s infinite;
-    animation-timing-function: linear;*/
     
-}
-
-@keyframes spinHand {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
 }
