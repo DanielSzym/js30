@@ -26,13 +26,34 @@ h1 {
     text-align:center;
 }
 
+.hand{
+    /*background: color #000000;*/
+    position:float;
+}
+
 #secondsHand {
-    background: color #000000;;
     /* Positioning */
-    margin-top:9.5em;  /* set to half of circle height - height of hand */
-    margin-left:.5em;
+    margin-top:9.6em;  /* set to half of circle height - height of hand = (20 - 10 - .4) */
+    margin-left:.5em;   
     width:9.5em; /* set to half of circle width - margin-left */
-    height:.5em;
+    height:.2em;
     transform-origin: right;
-    
+}
+
+#minutesHand {
+    /* Positioning */
+    margin-top:-.3em;  /* set to negative of half of height of above element = (.6 / 2 * -1) */
+    margin-left:.5em;
+    width:9.5em; /* set to half of circle width - margin-left = 20-.5*/
+    height:.6em;
+    transform-origin: right;
+}
+
+#hoursHand {
+    /* Positioning */
+    margin-top:-.6em;  /* set to negative of half of height of above elements = ((2 * .6) / 2 * -1) */
+    margin-left:3.4em; /* = .3 + 10 - 6.8*/
+    width:6.8em; /* set to half of circle width - margin-left = 20-.5*/
+    height:.6em;
+    transform-origin: right;
 }
