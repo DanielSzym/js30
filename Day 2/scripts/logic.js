@@ -1,4 +1,9 @@
-//TODO: Add listener to initialize when second changes
+/*
+TODO:
+    Add minutes Hand
+    Add hours hand
+    x Add listener to initialize when second changes
+*/
 
 //(() => { 
 
@@ -15,6 +20,7 @@
             var listenerInterval = setInterval(function() {
                 if (listener != getSecondDegree()) {
                     initializeSeconds();
+                    initializeMinutes();
                     clearInterval(listenerInterval);
                 }
             }, 16.67)
@@ -24,6 +30,11 @@
                 secondsDegree = getSecondDegree();
                 setSecondsHand(secondsDegree);
             }
+
+            function initializeMinutes(){
+                return;
+            }
+
         }
 
         function setSecondsHand(secondsDegree){
