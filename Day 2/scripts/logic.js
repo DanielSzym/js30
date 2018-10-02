@@ -1,15 +1,13 @@
 /*
 TODO:
-    Add minutes Hand
-    Add hours hand
+    x Add minutes Hand
+    x Add hours hand
     x Add listener to initialize when second changes
 */
 
-//(() => { 
-
 (function(window, document, undefined){
 
-    // code that should be taken care of right away
+    // code that will be taken care of right away
     
     window.onload = initialize;
     
@@ -37,12 +35,12 @@ TODO:
             secondsDegree = getSecondDegree();
             minutesDegree = getMinuteDegree();
             hoursDegree = getHourDegree();
-            console.log(hoursDegree);
+
 
             //set style element
             setSecondsHandStyle(secondsHand, secondsDegree);
             setMinutesHandStyle(minutesHand, minutesDegree);
-            setHoursHandStyle(minutesHand, minutesDegree);
+            setHoursHandStyle(hoursHand, hoursDegree);
 
             //make hands visible
             minutesHand.style.backgroundColor = '#ffffff';
@@ -102,15 +100,15 @@ TODO:
         //Hours
         function getHourDegree() {
             var d = new Date();
-            return (d.getHours()*6)+90; //x 6 for getting base 360 and +90 because initialized with 0deg = 45 secs
+            console.log(d.getHours());
+            return (d.getHours()*30)+90; //x 15 for getting base 360 and +90 because initialized with 0deg = 9 hours
         }
 
         function setHoursHandStyle(hoursHand, hoursDegree){
             var degree = 'rotate('+hoursDegree+'deg)';
+            console.log(degree);
             hoursHand.style.transform = degree;
         }
     
-    })(window, document, undefined);
-
-  
-//})();
+    }
+)(window, document, undefined);
