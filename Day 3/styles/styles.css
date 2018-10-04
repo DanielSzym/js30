@@ -1,9 +1,14 @@
+:root {
+    --base: rgb(229,90,8);
+    --blur: 0px;
+    --spacing: 10px;
+}
+
 /*
     TAGS
 */
 body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    /*align-items: center;*/
     align-content: center;
     text-align: center;
 }
@@ -13,6 +18,9 @@ body{
 */
 h2 {
     font-size:250%;
+}
+.highlight {
+    color: var(--base);
 }
 
 /*
@@ -25,4 +33,7 @@ h2 {
 .image {
     width:80%;
     max-width:720px;
+    background-color: var(--base);
+    padding: var(--spacing);
+    filter: blur(var(--blur));
 }
