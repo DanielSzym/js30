@@ -2,12 +2,27 @@
     TAGS
 */
 body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /*align-items: center;*/
+    align-content: center;
+    text-align: center;
 }
 
 /*
     TYPOGRAPHY
 */
+h2 {
+    font-size:250%;
+}
 
 /*
     CUSTOM CLASSES
 */
+.control-elements{
+    margin-bottom: 24px;
+}
+
+.image {
+    width:80%;
+    max-width:720px;
+}
