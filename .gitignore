@@ -1,2 +1,5 @@
-# template
+# template files
 template/
+
+# Apple stuff
+.DS_Store
