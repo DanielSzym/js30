@@ -6,17 +6,27 @@
 
     function initialize() {
         const colorPicker = document.getElementById('color');
-        const imageBackground = document.getElementsByClassName('image');
-        const bg = document.body;
+        const blurFilter = document.getElementById('blur');
+        
+        const body = document.body;
+
+        
 
         colorPicker.addEventListener('change', watchColorPicker, false);
+        colorPicker.addEventListener('change', watchBlurFilter, false);
 
         function watchColorPicker() {
             console.log('changed to ' + this.value);
-            console.log(imageBackground);
-            //imageBackground.style.setProperty('background-color', 'red')
-            bg.style.setProperty('background-color', this.value);
+            body.style.setProperty('--base', this.value);
         }
+
+        function watchBlurFilter (){
+            console.log(blurFilter);
+            body.style.setProperty('--blur', this.value);
+        }
+
+        
+        //body.style.setProperty('--spacing', this.value);
     }
 
 
