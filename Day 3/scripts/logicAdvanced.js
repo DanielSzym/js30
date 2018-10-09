@@ -5,43 +5,18 @@
     window.onload = initialize;
 
     function initialize() {
-        const body = document.body;
-        
-        
         const elements = document.body.querySelectorAll('.control-elements input');
-        console.log(elements);
 
         function handleUpdate () {
-            console.log(this.update);
+            const suffix = this.dataset.suffix || ''; //fallback of this dataset does not exist in html element
+            //documentElemenet refers to the root element, here the <html> tag. body would refer to <body> element
+            document.documentElement.style.setProperty('--'+this.name, this.value + suffix);
+            //this.name refers to name property of html element
         }
-
-        /*const colorPicker = document.getElementById('color');
-        const blurFilter = document.getElementById('blur');
-        const spaceFilter = document.getElementById('spacing');
-
-        const spacingInt = document.querySelector('.spacingPx');
-        const blurInt = document.querySelector('.blurPx');
         
-
-        colorPicker.addEventListener('change', watchColorPicker, false);
-        //change blur also works with mousemove but tracks every hover as well
-        blurFilter.addEventListener('change', watchBlurFilter, false);
-        spaceFilter.addEventListener('change', watchSpaceFilter, false);
-
-        function watchColorPicker () {
-            //console.log('changed to ' + this.value);
-            body.style.setProperty('--base', this.value);
-        }
-
-        function watchBlurFilter (){
-            body.style.setProperty('--blur', this.value + 'px');
-            blurInt.innerHTML = this.value;
-        }
-
-        function watchSpaceFilter (){
-            body.style.setProperty('--spacing', this.value + 'px');
-            spacingInt.innerHTML = this.value;
-        }*/
+        //#1 to compare normal function to arrow function
+        //elements.forEach(function (elements) { elements.addEventListener('change', handleUpdate)});
+        elements.forEach(elements => elements.addEventListener('change', handleUpdate)); //or mousover event
 
     }
 

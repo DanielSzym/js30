@@ -27,12 +27,12 @@
 
         function watchBlurFilter (){
             body.style.setProperty('--blur', this.value + 'px');
-            blurInt.innerHTML = this.value;
+            blurInt.innerHTML = '(' + this.value + 'px)';
         }
 
         function watchSpaceFilter (){
             body.style.setProperty('--spacing', this.value + 'px');
-            spacingInt.innerHTML = this.value;
+            spacingInt.innerHTML = '(' + this.value + 'px)';
         }
 
         
