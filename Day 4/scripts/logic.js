@@ -55,7 +55,7 @@ const inventors = [
   inventorsSortYear2.sort((a,b) => a.year > b.year ? 1 : -1);
   //console.table(inventorsSortYear2);
 
-  // HAVE A LOOK INTO ABOVE CODE AGAIN!
+  //TODO: HAVE A LOOK INTO ABOVE CODE AGAIN! 11:30 mins vid
 
   // Array.prototype.reduce()
   // 4. How many years did all the inventors live?
