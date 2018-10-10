@@ -15,7 +15,7 @@ const inventors = [
   ];
   const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick', 'Beecher, Henry', 'Beethoven, Ludwig', 'Begin, Menachem', 'Belloc, Hilaire', 'Bellow, Saul', 'Benchley, Robert', 'Benenson, Peter', 'Ben-Gurion, David', 'Benjamin, Walter', 'Benn, Tony', 'Bennington, Chester', 'Benson, Leana', 'Bent, Silas', 'Bentsen, Lloyd', 'Berger, Ric', 'Bergman, Ingmar', 'Berio, Luciano', 'Berle, Milton', 'Berlin, Irving', 'Berne, Eric', 'Bernhard, Sandra', 'Berra, Yogi', 'Berry, Halle', 'Berry, Wendell', 'Bethea, Erin', 'Bevan, Aneurin', 'Bevel, Ken', 'Biden, Joseph', 'Bierce, Ambrose', 'Biko, Steve', 'Billings, Josh', 'Biondo, Frank', 'Birrell, Augustine', 'Black, Elk', 'Blair, Robert', 'Blair, Tony', 'Blake, William'];
   
-  //NOTE: console log auskommentiert!
+  //NOTE: console log ist überall auskommentiert!
 
   // Array.prototype.filter()
   // 1. Filter the list of inventors for those who were born in the 1500's
@@ -36,13 +36,28 @@ const inventors = [
   // 2. Give us an array of the inventors' first and last names
   const firstName = [];
   inventors.map(inventor => firstName.push(inventor.first + ' ' + inventor.last));
-  console.log(firstName);
+  //console.log(firstName);
+
+  //Use template strings
+  const firstName2 = inventors.map(a => `${a.first}` + `{a.last}`);
+  console.log(firstName2);
 
   // Array.prototype.sort()
   // 3. Sort the inventors by birthdate, oldest to youngest
+  const inventorsSortYear = inventors;
+  inventorsSortYear.sort(
+    (a, b) => {if (a.year<b.year) return -1;
+                else if (a.year>b.year) return 1;
+                else return 0;
+  });
+  //console.table(inventorsSortYear);
 
   // Array.prototype.reduce()
   // 4. How many years did all the inventors live?
+  //reducer is our function, 0 ist our base where we start
+  const reducer = (total, current) => (total + (current.passed - current.year));
+  const years = inventors.reduce(reducer, 0);
+  //console.log(years);
 
   // 5. Sort the inventors by years lived
 
@@ -51,7 +66,14 @@ const inventors = [
 
   // 7. sort Exercise
   // Sort the people alphabetically by last name
-  
+  const inventorsSortLast = inventors;
+  inventorsSortLast.sort(
+    (a, b) => {if (a.last<b.last) return -1;
+                else if (a.last>b.last) return 1;
+                else return 0;
+              });
+  //console.table(inventorsSortLast);
+
   // 8. Reduce Exercise
   // Sum up the instances of each of these
 
