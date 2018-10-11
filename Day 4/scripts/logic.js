@@ -50,12 +50,10 @@ const inventors = [
                 else return 0;
   });
   //console.table(inventorsSortYear);
-    //solution 2 (WesBos)
+    //solution 2 (WesBos) NOTE: I figured it does not totalle work since we do not cover the = exception
   const inventorsSortYear2 = inventors;
   inventorsSortYear2.sort((a,b) => a.year > b.year ? 1 : -1);
   //console.table(inventorsSortYear2);
-
-  //TODO: HAVE A LOOK INTO ABOVE CODE AGAIN! 11:30 mins vid
 
   // Array.prototype.reduce()
   // 4. How many years did all the inventors live?
@@ -66,20 +64,30 @@ const inventors = [
 
   // 5. Sort the inventors by years lived
   const oldest = inventors.sort((a,b) => (a.passed - a.lived) > (b.passed - b.lived) ? 1 : -1);
-  console.table(oldest);
+  //console.table(oldest);
 
   // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
   // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
+  //TODO: HAVE A LOOK INTO ABOVE CODE AGAIN! 11:30 mins vid
+
   // 7. sort Exercise
   // Sort the people alphabetically by last name
-  const inventorsSortLast = inventors;
-  inventorsSortLast.sort(
-    (a, b) => {if (a.last<b.last) return -1;
-                else if (a.last>b.last) return 1;
-                else return 0;
-              });
-  //console.table(inventorsSortLast);
+  console.log(people);
+  people.sort((last,next) => {
+    last > next ? -1 : 1;
+  });
+  //console.log(people);
+  //solution 2 (WesBos)
+  people.sort((lastOne, nextOne) => {
+    const [aLast, aNext] = lastOne.split(', ');
+    const [bLast, bNext] = nextOne.split(', ');
+    if (aLast > bLast ) return 1;
+    else if (aLast < bLast ) return -1;
+    else return 0;
+    //aLast > bLast ? 1 : -1;
+  });
+  console.log(people);
 
   // 8. Reduce Exercise
   // Sum up the instances of each of these
