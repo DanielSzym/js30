@@ -73,12 +73,11 @@ const inventors = [
 
   // 7. sort Exercise
   // Sort the people alphabetically by last name
-  console.log(people);
   people.sort((last,next) => {
     last > next ? -1 : 1;
   });
   //console.log(people);
-  //solution 2 (WesBos)
+  //solution 2 (WesBos) but with else if statement
   people.sort((lastOne, nextOne) => {
     const [aLast, aNext] = lastOne.split(', ');
     const [bLast, bNext] = nextOne.split(', ');
@@ -87,9 +86,44 @@ const inventors = [
     else return 0;
     //aLast > bLast ? 1 : -1;
   });
-  console.log(people);
+  //console.table(people);
 
   // 8. Reduce Exercise
   // Sum up the instances of each of these
 
+
+  //const reducer = (total, current) => (total + (current.passed - current.year));
+  //const years = inventors.reduce(reducer, 0);
+  //console.log(years);
+
   const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+  var reducedDataArr = [
+    { type: 'car', count: 0},
+    { type: 'truck', count:0},
+    { type: 'bike', count:0},
+    { type: 'walk', count:0},
+    { type: 'van', count:0}
+  ];
+  
+  const reducedData = data.reduce(function(a, b) {
+    reducedDataArr.forEach(function (elem) {
+      if (elem.type == b) elem.count++;
+    });
+  }, 0);
+  //console.table(reducedDataArr);
+
+  //solution 2 (WesBos)
+  const transportation = data.reduce(function (obj, item) {
+    for (key in obj) {
+      if (key==item) obj[key]++;
+    }
+    
+    return obj;
+  }, {
+    car: 0,
+    walk: 0,
+    truck: 0,
+    van: 0,
+    bike: 0
+  });
+  console.log(transportation);
