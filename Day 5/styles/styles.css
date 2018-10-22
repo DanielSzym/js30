@@ -1,0 +1,63 @@
+/*
+    TAGS
+*/
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    font-family: "Helvetica neue";
+    font-size: 40px;
+    text-transform: uppercase;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/*
+    TYPOGRAPHY
+*/
+
+/*
+    CUSTOM CLASSES
+*/
+.panels {
+    min-height: 100vh;
+    overflow:hidden;
+    display:flex;
+}
+.panel {
+    background-size: cover;
+    background-position: center;
+    flex:1;
+    align-items:center;
+    text-align:center;
+    justify-content:center;
+    transition: font-size .2s;
+    background-size:cover;
+    background-position:center;
+    font-size: 24px;
+    display:flex;
+    flex-direction:column;
+}/* TODO: Continue 4.32 min */
+.panel1 {
+    background-color: red;
+    background-image: url("../img/vishnu-r-nair-background.jpg");
+}
+.panel2 {
+    background-color: yellow;
+    background-image: url("../img/charl-van-rooy-672182-unsplash.jpg");
+}
+.panel3 {
+    background-color: green;
+    background-image: url("../img/riccardo-chiarini-365677-unsplash.jpg");
+}
+.panel4 {
+    background-color: lightblue;
+    background-image: url("../img/vishnu-r-nair-background.jpg");
+}
+.panel5 {
+    background-color: lightblue;
+    background-image: url("../img/charl-van-rooy-672182-unsplash.jpg");
+}
