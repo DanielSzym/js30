@@ -7,6 +7,7 @@
 
     <!--CSS files-->
     <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet">
 
     <!--JS files-->
     <script src="scripts/logic.js"></script>
@@ -14,32 +15,56 @@
     <title>Day 5 - Flex Panel Image Gallery</title>
   </head>
   <body>
-      <div class="panels">
-        <div class="panel panel1">
-          <p>Hey</p>
-          <p>Let's</p>
-          <p>Dance</p>
-        </div>
-        <div class="panel panel2">
-          <p>Give</p>
-          <p>Take</p>
-          <p>Receive</p>
-        </div>
-        <div class="panel panel3">
-          <p>Experience</p>
-          <p>It</p>
-          <p>Today</p>
-        </div>
-        <div class="panel panel4">
-          <p>Give</p>
-          <p>all</p>
-          <p>you can</p>
-        </div>
-        <div class="panel panel5">
-          <p>Life</p>
-          <p>in</p>
-          <p>motion</p>
-        </div>
+    <div class="panels">
+      <div class="panel panel1">
+        <p>Hey</p>
+        <p>Let's</p>
+        <p>Dance</p>
       </div>
+      <div class="panel panel2">
+        <p>Give</p>
+        <p>Take</p>
+        <p>Receive</p>
+      </div>
+      <div class="panel panel3">
+        <p>Experience</p>
+        <p>It</p>
+        <p>Today</p>
+      </div>
+      <div class="panel panel4">
+        <p>Give</p>
+        <p>all</p>
+        <p>you can</p>
+      </div>
+      <div class="panel panel5">
+        <p>Life</p>
+        <p>in</p>
+        <p>motion</p>
+      </div>
+    </div>
+    <script>
+        // get all panels
+        const panels = document.querySelectorAll('.panel')
+
+        // toggle open class for slide transition
+        function toggleOpen() {
+          panels.forEach(el => {
+            if (el != this) {
+              el.classList.remove('open')
+            }
+          })
+          this.classList.toggle('open')
+        }
+        
+        // toggle active class for text fade-in
+        function toggleActive(e) {
+          if(e.propertyName.includes('flex')) {
+            this.classList.toggle('open-active')
+          }
+        }
+
+        panels.forEach(el => el.addEventListener('click', toggleOpen))
+        panels.forEach(el => el.addEventListener('transitionend', toggleActive))
+    </script>
   </body>
 </html>
