@@ -59,24 +59,19 @@ body{
 .panel.open-active > *:last-child { transform: translateY(0) }
 
 .panel1 {
-    background-color: red;
     background-image: url("../img/riccardo-chiarini-365677-unsplash.jpg");
     /* Photo by Donnie Rosie on Unsplash */
 }
 .panel2 {
-    background-color: yellow;
     background-image: url("../img/charl-van-rooy-672182-unsplash.jpg");
 }
 .panel3 {
-    background-color: green;
     background-image: url("../img/riccardo-chiarini-365677-unsplash.jpg");
 }
 .panel4 {
-    background-color: lightblue;
     background-image: url("../img/vishnu-r-nair-background.jpg");
 }
 .panel5 {
-    background-color: lightblue;
     background-image: url("../img/charl-van-rooy-672182-unsplash.jpg");
 }
 .panel.open {
