@@ -12,13 +12,58 @@
     <!--<script src="scripts/logic.js"></script>-->
 
     <title>Day 2</title>
+    <style>
+        .props {
+          color:black;
+          font-style: italic;
+          display:flex;
+          justify-content: center;
+        }
+        .props a {
+          text-decoration:none;
+          color: #ECCF18;
+        }
+      </style>
   </head>
   <body style="font-family: 'Courier New', Courier, monospace">
     <p>Select a project</p>
-    <a href="Day 1/index.html">Day 1 - Drums</a><br>
-    <a href="Day 2/index.html">Day 2 - Clock</a><br>
-    <a href="Day 3/index.html">Day 3 - Color Picker</a><br>
-    <a href="Day 4/index.html">Day 4 - Array Cardio 💪</a><br>
-    <a href="Day 5/index.html">Day 5 - Image Gallery</a><br>
+    <div id="days"></div>
+    <p class="props">Props to&nbsp;<a href="https://wesbos.com/" target="_blank">WesBos</a>&nbsp;for this&nbsp;<a href="https://javascript30.com/" target="_blank">js30</a>&nbsp;challenge!</p>
   </body>
+  <script>
+      
+      var days = {
+        Day1: {
+          path: 'Day 1',
+          name: 'Drums'
+        },
+        Day2: {
+          path: 'Day 2',
+          name: 'Clock'
+        },
+        Day3: {
+          path: 'Day 3',
+          name: 'Color Picker'
+        },
+        Day4: {
+          path: 'Day 4',
+          name: 'Array Cardio 💪'
+        },
+        Day5: {
+          path: 'Day 5',
+          name: 'Image Gallery'
+        }
+      }
+      var str = ''
+      
+
+      console.log(days)
+      for (var key in days) {
+        if (days.hasOwnProperty(key)) {
+            str += '<a href="' + days[key].path + '/index.html">'+ days[key].path + ' - ' + days[key].name + '</a><br>'
+        }
+      }
+      document.getElementById('days').innerHTML = str
+    </script>
 </html>
+
