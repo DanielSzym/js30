@@ -13,8 +13,26 @@
     <script src="scripts/logicAdvanced.js"></script>
 
     <title>Day 3 - Color Picker</title>
+    <style>
+      .backButton {
+        background-color: rgb(182, 182, 182);
+        box-shadow: 0px 5px 10px rgba(182, 182, 182, 0.4);
+        border: none;
+        border-radius:5px;
+        font-size: 80%;
+        color: white;
+        padding: 10px 16px;
+        text-decoration: none;
+        margin-top: 4px;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
+    <div class="search">
+      <!--<img src="/resources/img/arrow_left.svg">-->
+      <input class="backButton" type="button" value="Back" onclick="window.location.href='../index.html'" />
+    </div>
     <h2>Update CSS Variables with <span class="highlight">JS</span></h2>
     <div class="control-elements">
       <label for="spacing">Spacing <span class="spacingPx"></span></label>
